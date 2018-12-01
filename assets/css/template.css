@@ -1,0 +1,44 @@
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+}
+
+#listaHome{
+    margin-left: 100px;
+}
+
+.secao-cadastro, .secao-login{
+    margin-top: 4%;
+    margin-left: 30%;
+
+}
+
+.secao-meus-anuncios, .secao-meu-perfil{
+    margin-top: 4%;
+}
+
+.local-anuncio, .valor-anuncio, .titulo-anuncio{
+    line-height: 140px;
+    font-size: 18px;
+}
+
+#btn-exclui-img{
+    margin-top: 14%;
+    margin-left: -15%;
+}
+
+
+.imagem-salva{
+    margin-bottom: 5%;
+    border:1px solid #555;
+    height: 150px;
+}
+
+.btn-sair{
+    float: right;
+    position: absolute;
+    margin-left: 95%;
+}
