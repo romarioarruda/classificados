@@ -86,7 +86,7 @@
                                 <div class="img-salva">
                                     <?php foreach($anuncio_img as $imgs): ?>
                                         <img src="<?= BASE_URL ?>assets/img/anuncios/<?= $imgs['url']?>" class="img-fluid imagem-salva" width="180">
-                                        <button type="button" id-img="<?= $imgs['id']?>" class="btn btn-danger btn-exclui-img" id="btn-exclui-img">excluir imagem</button>
+                                        <button type="button" id-img="<?= $imgs['id']?>" class="btn btn-danger btn-exclui-img" id="btn-exclui-img" data-toggle="modal" data-target="#exampleModal">excluir imagem</button>
                                     <?php endforeach; ?>
                                 </div>
                             <?php endif; ?>
@@ -107,3 +107,24 @@
     </div>
 
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header alert-danger">
+        <h5 class="modal-title" id="exampleModalLabel">Deletar Imagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Essa imagem será deletada!</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary btn-exluir-imagem-modal">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>

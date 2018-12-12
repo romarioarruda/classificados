@@ -40,7 +40,7 @@
                                 <td class="valor-anuncio">R$ <?= number_format($dados['valor'], 2, ',', '.') ?></td>
                                 <td class="local-anuncio">
                                     <a href="<?= BASE_URL ?>meusanuncios/editar/<?=$dados['id']?>" class="btn btn-info">Editar</a>
-                                    <button id-anuncio="<?=$dados['id']?>" class="btn btn-danger btn-exclui-anuncio">Excluir</button>
+                                    <button id-anuncio="<?=$dados['id']?>" class="btn btn-danger btn-exclui-anuncio" data-toggle="modal" data-target="#exampleModal">Excluir</button>
                                 </td>
                             </tr>
                        <?php endforeach; ?>
@@ -52,3 +52,25 @@
     </div>
 
 </section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header alert-danger">
+        <h5 class="modal-title" id="exampleModalLabel">Deletar Anúncio</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Esse anúncio será deletado!</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary btn-exluir-anuncio-modal">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
