@@ -15,11 +15,9 @@ class meuperfilController extends controller
 
         $dados = [];
         if (!empty($nome) && !empty($email) && !empty($tel) && !empty($senha_antiga) && !empty($senha_nova)) {
-            
             $dados = array(
                 'atualiza_dados' => $usuario->atualizaDados($nome, $email, $tel, $senha_antiga, $senha_nova),
             );
-    
         }
 
         $this->loadTemplate('meuperfil', $dados);
