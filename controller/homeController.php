@@ -17,11 +17,7 @@ class homeController extends controller
         $dados['totalPaginas']  = ceil($total/$limit);
         $dados['paginaAtual']   = 1;
 
-        if (!empty($_GET['p'])) {
-            
-            $dados['paginaAtual'] = intval($_GET['p']);
-            
-        }
+        if (!empty($_GET['p'])) $dados['paginaAtual'] = intval($_GET['p']);
         
         $offset = ($dados['paginaAtual'] * $limit) - $limit;
         $dados['listaAnuncios'] = $anuncios->getListaAnuncios($offset, $limit);
@@ -45,9 +41,7 @@ class homeController extends controller
         $dados = [];
         if (isset($nome) && isset($telefone) && isset($email) && isset($senha)) {
             $dados = array(
-            
                 'cadastrado' => $usuario->cadastraUsuario($nome, $telefone, $email, $senha),
-                
             );
         }
 
