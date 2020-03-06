@@ -1,3 +1,5 @@
-# classificados_mvc
+# Sistema de classificados
 
-Sistema de publicação de produtos para venda, classificados em resumo.
+Sistema de publicação de produtos, parecido com a OLX.
+
+Sistema desenvolvido em PHP, baseado em MVC.
